@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+    <h2>Login</h2>
+    <input type="text" id="name" placeholder="Enter Name"><br><br>
+    <input type="email" id="email" placeholder="Enter Email"><br><br>
+    <button onclick="login()">Continue</button>
+    <p style="margin-top:15px; font-size:14px;">
+     Don't have an account? <a href="create-account.html">Create Account</a>
+     </p>
+
+  </div>
+
+  <script>
+  function login() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    if (!name || !email) {
+      alert("Fill all fields properly");
+      return;
+    }
+
+    localStorage.setItem("user", JSON.stringify({ name, email }));
+    window.location.href = "index.html";
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem("user")) {
+      window.location.href = "index.html";
+    }
+  };
+  </script>
+
+<script src="js/login.js"></script>
+</body>
+</html>
