@@ -1,20 +1,16 @@
-# 👗 Fashion Chatbot
+## Fashion Chatbot
 
 An AI-powered Fashion Chatbot that helps users get outfit suggestions and styling ideas through a simple chat interface. Built using Spring Boot and a clean frontend, this project combines AI with a user-friendly design.
 
----
+## Features
 
-## 🚀 Features
+- Chat-based fashion recommendations  
+- Clean and simple UI  
+- Secure API key handling (environment variables)  
+- Real-time AI responses  
+- Chat history support  
 
-- 💬 Chat-based fashion recommendations  
-- 🎨 Clean and simple UI  
-- 🔐 Secure API key handling (environment variables)  
-- ⚡ Real-time AI responses  
-- 🕘 Chat history support  
-
----
-
-## 🛠️ Tech Stack
+--- Tech Stack ---
 
 ### Frontend
 - HTML  
@@ -30,7 +26,7 @@ An AI-powered Fashion Chatbot that helps users get outfit suggestions and stylin
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 fashion-chatbot/
 │
 ├── backend/ # Spring Boot application
@@ -38,11 +34,7 @@ fashion-chatbot/
 ├── .gitignore
 └── README.md
 
-
-
----
-
-## 🔐 Security Note
+## Security Note
 
 - API keys are **not included** in this repository  
 - Use environment variables to keep them secure  
