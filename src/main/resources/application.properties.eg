@@ -1,2 +1,2 @@
 cohere.api.key=${COHERE_API_KEY}
-server.port=3030
+server.port=10000
