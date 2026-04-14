@@ -27,7 +27,7 @@ async function sendMessage() {
   saveMessage("You", message);
   input.value = "";
   try {
-    const response = await fetch("http://localhost:3030/api/chat", {
+    const response = await fetch("https://fashion-chatbot-4.onrender.com/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -42,7 +42,7 @@ async function sendMessage() {
     addMessage("Bot", reply);
     saveMessage("Bot", reply);
   } catch (err) {
-    addMessage("Bot", "Server error. Make sure backend is running.");
+    addMessage("Bot", "Server error. Backend might be sleeping (wait 30 sec and try again)");
   }
 }
 
