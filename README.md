@@ -38,4 +38,7 @@ fashion-chatbot/
 
 - API keys are **not included** in this repository  
 - Use environment variables to keep them secure  
-- `application.properties` is ignored using `.gitignore`  
+- `application.properties` is ignored using `.gitignore`
+
+## Project Live
+https://fashion-chatbot-6.onrender.com
