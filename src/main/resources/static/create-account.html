@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+    <h2>Create Account</h2>
+
+    <input type="text" id="name" placeholder="Enter Name"><br><br>
+    <input type="email" id="email" placeholder="Enter Email"><br><br>
+    <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+    <button onclick="createAccount()">Create Account</button>
+
+    <p style="margin-top:15px; font-size:14px;">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+  </div>
+
+  <script>
+    function createAccount() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!name || !email || !password) {
+        alert("Fill all fields properly");
+        return;
+      }
+
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+
+      if (users.some(u => u.email === email)) {
+        alert("Account already exists. Please login.");
+        return;
+      }
+
+      users.push({ name, email, password });
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Account created successfully!");
+      window.location.replace("login.html");
+    }
+  </script>
+
+</body>
+</html>
